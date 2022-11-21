@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -44,3 +45,51 @@ text-align: center;
 }
 
 
+=======
+html{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#addLocation{
+    display: inline-block;
+    height: 30px;
+    width: 95px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+#Go{
+    height: 30px;
+    width: 60px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: none;
+}
+body{
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+header{
+background-image: url("https://subli.info/wp-content/uploads/2015/05/google-maps-blur.png");
+background-size: cover;
+height: 300px;
+width: 100%;
+}
+#spacer{
+    height: 50px;
+}
+
+h1{
+    color: black;
+font-size: 50pt;   
+padding: 100px;
+margin-top: 50px;
+margin-bottom: 50px;
+text-align: center;
+}
+
+
+>>>>>>> 80383b30f123e0663ea58ddf3633b83b41ac55cc
