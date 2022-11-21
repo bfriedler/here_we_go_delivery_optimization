@@ -44,8 +44,10 @@
         maxHrs = maxHrs * 60;
         while (addresses.length > 0) {
             currentLocation = startLoc;
+            $("#resultsTable").append("Trip " + tripCounter + "<br>");
             console.log("Trip " + tripCounter + "\n");
             let counter = 0;
+
             console.log("addresses: " + addresses + "\n")
             addresses.forEach(async addr => {
                 //find longest distance
@@ -66,6 +68,7 @@
             //first stop
             currentLocation = addresses[largestCounter];
             addresses.splice(largestCounter);
+            $("#resultsTable").append(currentLocation + "<br>");
             // console.log(currentLocation + " " + longestDistance + "\n");
             totalTimeTravelled = longestDistance + deliveryTime;
             timeHome = await calculateDistance(currentLocation, endLoc);
@@ -87,6 +90,7 @@
                 });
                 if (totalTimeTravelled + shortestDistance + deliveryTime + await calculateDistance(addresses[shortestCounter], endLoc) <= maxHrs) {
                     currentLocation = calcShort[shortestCounter];
+                    $("#resultsTable").append(addresses[shortestCounter] + "<br>");
                     // console.log(addresses[shortestCounter] + " " + shortestDistance + "\n");
                     addresses.splice(shortestCounter);
                     totalTimeTravelled = totalTimeTravelled + shortestDistance + deliveryTime;
